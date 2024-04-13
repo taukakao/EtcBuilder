@@ -205,10 +205,12 @@ func ExtBuildCommand(oldSys string, newSys string, oldUser string, newUser strin
 			return err
 		})
 		if isInSys == false {
+			fmt.Println("appending", userPath, "to userPaths")
 			userPaths = append(userPaths, userPath)
 		}
 		return err
 	})
+	fmt.Println("User paths are: ", userPaths)
 	if err != nil {
 		return err
 	}
