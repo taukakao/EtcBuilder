@@ -178,6 +178,8 @@ func TestSpecialFile(t *testing.T) {
 
 	fileRel := "test/äu/path/special file"
 
+	t.FailNow()
+
 	oldUserFile := filepath.Join(oldUser, fileRel)
 	err = os.MkdirAll(filepath.Dir(oldUserFile), 0o777)
 	if err != nil {
